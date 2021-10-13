@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -14,6 +16,7 @@ public class Home extends AppCompatActivity {
 
     public BottomNavigationView bottomNavigation;
     public Fragment fragment;
+    Intent intent;
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -39,8 +42,9 @@ public class Home extends AppCompatActivity {
                     return true;
                 }
                 case R.id.mn_inicio:
-                    fragment = new FragmentHome();
-                    showFragment();
+                    showConfiguration();
+                    /*fragment = new FragmentHome();
+                    showFragment();*/
                     return true;
                 case R.id.mn_perfil:
                     fragment = new FragmentProfile();
@@ -62,6 +66,11 @@ public class Home extends AppCompatActivity {
                 .replace(R.id.fragment_home, fr)
                 .setReorderingAllowed(true).addToBackStack(null)
                 .commit();
+    }
+
+    public void showConfiguration() {
+        intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 

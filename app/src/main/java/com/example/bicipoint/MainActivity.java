@@ -1,15 +1,12 @@
 package com.example.bicipoint;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -21,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class FragmentHome extends Fragment {
+public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     FloatingActionButton addButton;
@@ -29,24 +26,20 @@ public class FragmentHome extends Fragment {
     CustomAdapter adapter;
     List<Note> dataList;
 
-    public FragmentHome() {
-        // Required empty public constructor
-    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        View view = inflater.inflate(R.layout.activity_main, null);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        recyclerView           = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        addButton              = view.findViewById(R.id.addButton);
-        databaseHelper         = new DatabaseHelper(getContext());
+        recyclerView           = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        addButton              = findViewById(R.id.addButton);
+        databaseHelper         = new DatabaseHelper(MainActivity.this);
 
 
         loadData();
+
 
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -58,21 +51,28 @@ public class FragmentHome extends Fragment {
             }
         });
 
+
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+    private void loadData() {
 
+        dataList  = new ArrayList<>();
+        dataList = databaseHelper.getAllNotes();
 
-        return view;
+        if (dataList.size() > 0){
+            adapter = new CustomAdapter(MainActivity.this,dataList);
+            recyclerView.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        }else {
+            Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
+        }
+
     }
+
 
     private void customDialog() {
 
-        AlertDialog.Builder builder  = new AlertDialog.Builder(getContext());
+        AlertDialog.Builder builder  = new AlertDialog.Builder(MainActivity.this);
         View view = getLayoutInflater().inflate(R.layout.custom_dialog,null);
         builder.setView(view);
 
@@ -109,29 +109,29 @@ public class FragmentHome extends Fragment {
                 if (status != -1){
                     alertDialog.dismiss();
                     loadData();
-                    Toast.makeText(getContext(), "Successfully Inserted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Successfully Inserted", Toast.LENGTH_SHORT).show();
                 }else {
                     alertDialog.dismiss();
-                    Toast.makeText(getContext(), "Failed to Insert", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Failed to Insert", Toast.LENGTH_SHORT).show();
 
                 }
+
+
+
+
             }
         });
 
+
+
+
+
+
         alertDialog.show();
-    }
 
-    private void loadData() {
 
-        dataList  = new ArrayList<>();
-        dataList = databaseHelper.getAllNotes();
 
-        if (dataList.size() > 0){
-            adapter = new CustomAdapter(getContext(),dataList);
-            recyclerView.setAdapter(adapter);
-            adapter.notifyDataSetChanged();
-        }else {
-            Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
-        }
+
+
     }
 }

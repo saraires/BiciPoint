@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout"
+    android:padding="10dp"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/custom_title"
+        android:layout_weight="1.5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="Note title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/custom_date"
+        android:gravity="end"
+        android:layout_weight="0.5"
+        android:text="Feb-08"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+</LinearLayout>
