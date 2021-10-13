@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <!-- Mirar twlio para verificacion de correo -->
+    <!-- Como enviar mensajes de texto o correos electronicos para la otra clase -->
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="176dp"
+            android:layout_y="103dp"
+            android:text="BiciPoint"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <EditText
+            android:id="@+id/rg_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="95dp"
+            android:layout_y="160dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <EditText
+            android:id="@+id/rg_correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="97dp"
+            android:layout_y="223dp"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="203dp" />
+
+        <EditText
+            android:id="@+id/rg_contrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="98dp"
+            android:layout_y="285dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="270dp" />
+
+        <Button
+            android:id="@+id/rg_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="139dp"
+            android:layout_y="435dp"
+            android:text="Regístrate"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="124dp"
+            android:layout_y="354dp"
+            android:text="Terminos y condiciones"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="404dp" />
+
+        <CheckBox
+            android:id="@+id/rg_chk_correo"
+            android:layout_width="113dp"
+            android:layout_height="45dp"
+            android:layout_x="144dp"
+            android:layout_y="380dp"
+            android:text="Acepto"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="423dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="83dp"
+            android:layout_y="552dp"
+            android:text="O inicia sesión con tus redes sociales"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="546dp" />
+
+        <Button
+            android:id="@+id/rg_btn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="58dp"
+            android:layout_y="599dp"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:text="Google"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="597dp" />
+
+        <Button
+            android:id="@+id/rg_btn_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="206dp"
+            android:layout_y="601dp"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:text="facebook"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="597dp" />
+
+    </AbsoluteLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

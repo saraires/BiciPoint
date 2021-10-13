@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="176dp"
+            android:layout_y="52dp"
+            android:text="Bicipoint"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <TextView
+            android:id="@+id/lg_InicioSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="166dp"
+            android:layout_y="138dp"
+            android:text="Iniciar Sesión"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="79dp" />
+
+        <EditText
+            android:id="@+id/lg_Correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="94dp"
+            android:layout_y="191dp"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="115dp" />
+
+        <EditText
+            android:id="@+id/lg_contrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="97dp"
+            android:layout_y="250dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <TextView
+            android:id="@+id/lg_olvidarcontrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="128dp"
+            android:layout_y="304dp"
+            android:text="¿Olvidaste la contraseña?"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
+            android:id="@+id/lg_btn_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="131dp"
+            android:layout_y="338dp"
+            android:text="Iniciar sesión"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="273dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="122dp"
+            android:layout_y="437dp"
+            android:text="¿Aún no tienes una cuenta?"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="334dp" />
+
+        <Button
+            android:id="@+id/lg_btn_registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="146dp"
+            android:layout_y="471dp"
+            android:text="Regístrate"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="403dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="88dp"
+            android:layout_y="555dp"
+            android:text="O inicia sesion con tus redes sociales"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="506dp" />
+
+        <Button
+            android:id="@+id/lg_btn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="57dp"
+            android:layout_y="603dp"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:text="Google"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="553dp" />
+
+        <Button
+            android:id="@+id/lg_btn_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="220dp"
+            android:layout_y="601dp"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:text="facebook"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="553dp" />
+
+    </AbsoluteLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
